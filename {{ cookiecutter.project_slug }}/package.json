@@ -1,17 +1,9 @@
 {
-  "name": "raw-typescript-template",
+  "name": "{{ cookiecutter.project_name }}",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/michaelzhan1/raw-typescript-template#readme",
-  "bugs": {
-    "url": "https://github.com/michaelzhan1/raw-typescript-template/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michaelzhan1/raw-typescript-template.git"
-  },
   "license": "ISC",
-  "author": "",
+  "author": "{{ cookiecutter.author }}",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
