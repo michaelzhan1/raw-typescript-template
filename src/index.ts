@@ -1,8 +1,8 @@
 const onClick = () => {
-  alert('Hello, world!');
+  alert("Hello, world!");
 };
 
-const button = document.getElementById('sample-button');
+const button = document.getElementById("sample-button");
 if (button !== null) {
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 }

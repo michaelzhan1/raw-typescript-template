@@ -1,8 +1,9 @@
 // @ts-check
 import js from "@eslint/js";
-import globals from "globals";
-import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigPrettier from "eslint-config-prettier";
 import { defineConfig, globalIgnores } from "eslint/config";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default defineConfig([
   {
@@ -12,11 +13,15 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
   },
-  eslintConfigPrettier,
-  globalIgnores([
-    "**/node_modules/**",
-    "**/dist/**",
-  ]),
+  tseslint.configs.recommended,
+
+  // eslintConfigPrettier,
+  globalIgnores(["**/node_modules/**", "**/dist/**"]),
 ]);
