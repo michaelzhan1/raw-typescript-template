@@ -19,11 +19,15 @@
     "watch": "tsc --watch",
     "start": "serve .",
     "dev": "concurrently \"tsc --watch\" \"serve .\"",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.7.1",
     "serve": "^14.2.5",
     "typescript": "^5.9.3"
