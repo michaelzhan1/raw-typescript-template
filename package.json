@@ -18,10 +18,13 @@
     "build": "tsc -b",
     "watch": "tsc --watch",
     "start": "serve .",
-    "dev": "concurrently \"tsc --watch\" \"serve .\""
+    "dev": "concurrently \"tsc --watch\" \"serve .\"",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "concurrently": "^9.2.1",
+    "prettier": "^3.7.1",
     "serve": "^14.2.5",
     "typescript": "^5.9.3"
   }
